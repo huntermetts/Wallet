@@ -15,16 +15,18 @@ export default class BudgetApp extends Component {
                 <div className="flexContainerForForm">
                     <form className="formContainer">
                         <div className="row">
+
                             <div className="col">
                                 <label htmlFor="name">Your Name:</label>
-                                <input type="text" required="true" onChange={this.props.handleFieldChange} className="form-control" id="name"placeholder="Name"></input>
-                                <small id="name" class="form-text text-muted">Don't worry, we wont't send you any form of messages or adds. <br></br> We only use your name to make your experience more customized.</small>
+                                <input type="text" required={true} onChange={this.props.handleFieldChange} className="form-control" id="name"placeholder="First Name"></input>
+                                <small id="name" className="form-text text-muted">Don't worry, we wont't send you any form of messages or adds. <br></br> We only use your name to make your experience more customized.</small>
                             </div>
 
                             <div className="col">
                                 <label htmlFor="monthlyIncome">Your monthly income:</label>
-                                <input type="text" required="true" onChange={this.props.handleFieldChange} className="form-control" id="monthlyIncome" placeholder="$4500"></input>
+                                <input type="text" required={true} onChange={this.props.handleFieldChange} className="form-control" id="monthlyIncome" placeholder="$0.00"></input>
                             </div>
+
                         </div>
                     </form>
 
@@ -34,7 +36,7 @@ export default class BudgetApp extends Component {
 
                     <div  className="centerProgress">
                         <div className="progressBar">
-                            <Progress striped animated color="success" value="6.25" />
+                            <Progress striped animated color="success" value="25" />
                         </div>
                     </div>
                 </div>

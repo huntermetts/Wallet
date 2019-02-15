@@ -19,7 +19,7 @@ padding-bottom: 0px;
 }
 
 .formContainer{
-    margin-top:0px;
+    margin-top:-70px;
     padding:20px;
     display: flex;
     justify-content: center;
@@ -47,6 +47,7 @@ padding-bottom: 0px;
   .progressBar{
       margin-top:4rem;
       width:75%;
+      margin-bottom:4rem;
   }
 
   .centerProgress{
