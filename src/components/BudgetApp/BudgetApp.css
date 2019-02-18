@@ -54,3 +54,13 @@ padding-bottom: 0px;
      display: flex;
      justify-content: center;
   }
+
+.chartjs-render-monitor{
+    margin-top: 10px;
+    margin-right:50px;
+    margin-left: -20px;
+}
+
+.homeButton{
+    margin-bottom: 45px;
+}

@@ -11,32 +11,34 @@ export default class ApplicationViews extends Component {
   state = {
     // Page 1
     name:'',
-    monthlyIncome:'',
+    monthlyIncome:0,
     // Page 2
-    mortgageRent:'',
-    carPayment:'',
-    carInsurance:'',
-    homeInsurance:'',
-    lifeInsurance:'',
-    religiousGiving:'',
+    mortgageRent:0,
+    carPayment:0,
+    carInsurance:0,
+    homeInsurance:0,
+    lifeInsurance:0,
+    religiousGiving:0,
     // Page 3
-    electric:'',
-    water:'',
-    phone:'',
-    grocery:'',
-    childcare:'',
-    pet:'',
+    electric:0,
+    water:0,
+    phone:0,
+    grocery:0,
+    childcare:0,
+    pet:0,
     // Page 4
-    clothing:'',
-    entertainment:'',
-    other:'',
-    eattingOut:'',
-    internet:'',
-    cable:'',
+    clothing:0,
+    entertainment:0,
+    other:0,
+    eattingOut:0,
+    internet:0,
+    cable:0,
 
     // Totals:
-    totalExpenses:'',
-    amountLeft:''
+    totalExpenses:0,
+    amountLeft:0,
+
+
   }
 
 
@@ -49,26 +51,26 @@ export default class ApplicationViews extends Component {
 
     resetSearch = () => {
       this.setState({name:''});
-      this.setState({monthlyIncome:''})
-      this.setState({mortgageRent:''})
-      this.setState({carPayment:''})
-      this.setState({homeInsurance:''})
-      this.setState({lifeInsurance:''})
-      this.setState({religiousGiving:''})
-      this.setState({electric:''})
-      this.setState({water:''})
-      this.setState({phone:''})
-      this.setState({grocery:''})
-      this.setState({childcare:''})
-      this.setState({pet:''})
-      this.setState({clothing:''})
-      this.setState({entertainment:''})
-      this.setState({other:''})
-      this.setState({eattingOut:''})
-      this.setState({internet:''})
-      this.setState({cable:''})
-      this.setState({totalExpenses:''})
-      this.setState({amountLeft:''})
+      this.setState({monthlyIncome:0})
+      this.setState({mortgageRent:0})
+      this.setState({carPayment:0})
+      this.setState({homeInsurance:0})
+      this.setState({lifeInsurance:0})
+      this.setState({religiousGiving:0})
+      this.setState({electric:0})
+      this.setState({water:0})
+      this.setState({phone:0})
+      this.setState({grocery:0})
+      this.setState({childcare:0})
+      this.setState({pet:0})
+      this.setState({clothing:0})
+      this.setState({entertainment:0})
+      this.setState({other:0})
+      this.setState({eattingOut:0})
+      this.setState({internet:0})
+      this.setState({cable:0})
+      this.setState({totalExpenses:0})
+      this.setState({amountLeft:0})
       console.log("something worked")
     }
 
@@ -220,6 +222,9 @@ export default class ApplicationViews extends Component {
 
             // Reset search
             resetSearch={this.resetSearch}
+
+            // Passing the dataset for the chart:
+            chartData={this.state.chartData}
                    />
           }} />
       </React.Fragment>

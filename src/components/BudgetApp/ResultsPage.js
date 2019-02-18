@@ -1,8 +1,62 @@
 import React, { Component } from 'react'
 import "./BudgetAppInputFormThree.css"
-import { Progress } from 'reactstrap';
+import {Bar, Line, Pie, Doughnut} from 'react-chartjs-2';
+
 
 export default class ResultsPage extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          // DATA State
+    chartData:{
+        labels: ["Mortgage | Rent", "Car Payment", "Car Insurance", "Home Insurance", "Life Insurance", "Religious Offering | Charity", "Electric", "Water", "Phone", "Grocery", "Pet", "Childcare", "Clothing","Entertainment", "Other", "Eatting Out", "Internet", "Cable | Video Streaming Service"],
+        datasets:[{
+            label:"Money Spent",
+            data:[
+              this.props.mortgageRent,
+              this.props.carPayment,
+              this.props.carInsurance,
+              this.props.homeInsurance,
+              this.props.lifeInsurance,
+              this.props.religiousGiving,
+              this.props.electric,
+              this.props.water,
+              this.props.phone,
+              this.props.grocery,
+              this.props.pet,
+              this.props.childcare,
+              this.props.clothing,
+              this.props.entertainment,
+              this.props.other,
+              this.props.eattingOut,
+              this.props.internet,
+              this.props.cable,
+            ],
+            backgroundColor:[
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+                "#76CE89",
+            ]
+        }]
+    }
+        }
+    }
 
     pushToHomeAndResetSearch = () => {
         this.props.resetSearch()
@@ -19,17 +73,28 @@ export default class ResultsPage extends Component {
                 <h4 className="headerDesc">Monthly, you spend a total of ${this.props.totalExpenses}.<br></br>
                 With the numbers you gave us you have ${this.props.amountLeft} left. </h4>
             </div>
-                <div className="flexContainerForForm">
-                    <div className="stepOneButtonContainer">
-                        <button type="submit" className="btn btn-success text-dark" onClick={this.pushToHomeAndResetSearch}>Home</button>
+                    <div  className="chart">
+                        <Bar
+                            data={this.state.chartData}
+                            width={700}
+                            height={450}
+                            options={{
+                            maintainAspectRatio: false,
+                            scales:{
+                                xAxes: [{
+                                    ticks: {
+                                        autoSkip: false
+                                    }
+                                }]
+                            }
+                            }}
+                         />
                     </div>
 
-                    {/* <div  className="centerProgress">
-                        <div className="progressBar">
-                            <Progress striped animated color="success" value="100" />
-                        </div>
-                    </div> */}
-                </div>
+
+                     <div className="stepOneButtonContainer">
+                        <button type="submit" className="btn btn-success text-dark homeButton" onClick={this.pushToHomeAndResetSearch}>Home</button>
+                    </div>
             </React.Fragment>
         )
     }
