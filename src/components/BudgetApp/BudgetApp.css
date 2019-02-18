@@ -1,0 +1,66 @@
+body{
+    background-color: #282C34;
+}
+
+.walletHeader{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    margin-top:50px;
+    padding-bottom: 50px;
+}
+
+.walletBold{
+font-size: 50px;
+padding-bottom: 0px;
+}
+
+.headerDesc{
+    font-size: 18px;
+}
+
+.formContainer{
+    margin-top:-70px;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+}
+
+.col{
+    flex-basis: 100%;
+    margin: 25px;
+}
+
+.form-control:focus {
+    border-color: #30A54A;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(2, 189, 49, 0.658);
+  }
+
+  label{
+      color:white;
+  }
+
+  .stepOneButtonContainer{
+      display: flex;
+      justify-content: center;
+  }
+
+  .progressBar{
+      margin-top:4rem;
+      width:75%;
+      margin-bottom:4rem;
+  }
+
+  .centerProgress{
+     display: flex;
+     justify-content: center;
+  }
+
+.chartjs-render-monitor{
+    margin-top: 10px;
+    margin-right:50px;
+    margin-left: -20px;
+}
+
+.homeButton{
+    margin-bottom: 45px;
+}

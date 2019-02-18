@@ -1,3 +1,3 @@
-# Empty React App Skeleton
+# React Budget App
 
-Clone down this repo, remove the .git, init with your specific repo info, start coding!
+Enter your monthly income and expenses to see where all your money is going!
