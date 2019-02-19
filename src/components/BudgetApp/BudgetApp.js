@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "./BudgetApp.css"
 import { Progress } from 'reactstrap';
+import { AvForm, AvField } from 'availity-reactstrap-validation';
 
 export default class BudgetApp extends Component {
 
@@ -25,6 +26,7 @@ export default class BudgetApp extends Component {
                             <div className="col">
                                 <label htmlFor="monthlyIncome">Your monthly income:</label>
                                 <input type="text" required={true} onChange={this.props.handleFieldChange} className="form-control" id="monthlyIncome" placeholder="$0.00"></input>
+
                             </div>
 
                         </div>

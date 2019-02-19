@@ -1,0 +1,11 @@
+.cardDeckSpacing{
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+footer{
+    padding: 25px;
+    background-color:#343A40;
+    color:white;
+    font-size: 13px;
+}

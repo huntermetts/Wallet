@@ -5,6 +5,7 @@ import BudgetAppInputFormTwo from './BudgetApp/BudgetAppInputFormTwo'
 import BudgetAppInputFormThree from './BudgetApp/BudgetAppInputFormThree'
 import BudgetAppInputFormFour from './BudgetApp/BudgetAppInputFour'
 import ResultsPage from './BudgetApp/ResultsPage'
+import BudgetAppHomePage from './BudgetApp/BudgetAppHomePage'
 
 export default class ApplicationViews extends Component {
 
@@ -98,8 +99,14 @@ export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-        <Route exact path="/" render={props => {
+        <Route exact path="/MonthlyBudgetApp" render={props => {
             return <BudgetApp {...props}
+            handleFieldChange={this.handleFieldChange}
+                   />
+          }} />
+
+          <Route exact path="/" render={props => {
+            return <BudgetAppHomePage {...props}
             handleFieldChange={this.handleFieldChange}
                    />
           }} />
