@@ -26,6 +26,7 @@ export default class BudgetApp extends Component {
                             <div className="col">
                                 <label htmlFor="monthlyIncome">Your monthly income:</label>
                                 <input type="text" required={true} onChange={this.props.handleFieldChange} className="form-control" id="monthlyIncome" placeholder="$0.00"></input>
+                                <small id="monthlyIncome" className="form-text text-muted">Please enter all values in these fields as numbers ONLY or the <br></br>  calculations will not be able to work properly.</small>
 
                             </div>
 

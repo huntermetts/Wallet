@@ -36,7 +36,7 @@ class NavBar extends Component {
             <nav className="navbar navbar bg-dark flex-md-nowrap p-10 shadow">
                 <ul className="nav nav-pills nav-fill">
                     <li className="nav-item">
-                        <Link className="nav-link text-success navText font-weight-bold" onClick={this.resetSearch} to="/MonthlyBudgetApp">W A L L E T.</Link>
+                        <Link className="nav-link text-success navText font-weight-bold" onClick={this.resetSearch} to="/">W A L L E T.</Link>
                     </li>
                 </ul>
             </nav>

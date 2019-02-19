@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import "./BudgetAppHomePage.css"
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Row, Col, CardDeck } from 'reactstrap';
+import budget from './budget.png'
 
 
 
@@ -18,11 +19,11 @@ export default class BudgetAppHomePage extends Component {
 
            <CardDeck className="cardDeckSpacing">
       <Card className="cardSpacing">
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
+        <CardImg top width="100%" src={budget} alt="Card image cap" />
         <CardBody>
           <CardTitle><strong>Monthly Expense Tracker</strong></CardTitle>
           <CardText>Simply enter your monthly income and expenses to see where your money is going.</CardText>
-          <Button>Take me there</Button>
+          <Button onClick={() => this.props.history.push("/MonthlyBudgetApp")}>Take me there</Button>
         </CardBody>
       </Card>
       <Card className="cardSpacing">

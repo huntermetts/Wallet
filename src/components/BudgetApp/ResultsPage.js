@@ -60,7 +60,7 @@ export default class ResultsPage extends Component {
 
     pushToHomeAndResetSearch = () => {
         this.props.resetSearch()
-        this.props.history.push("/MonthlyBudgetApp")
+        this.props.history.push("/")
     }
 
 
