@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import "./BudgetAppInputFormThree.css"
 import { Progress } from 'reactstrap';
 
-export default class BudgetAppInputFormForm extends Component {
+export default class BudgetAppInputFormFour extends Component {
 
     calculateAndPush = () => {
        this.props.calculateTotalAmountLeft()
