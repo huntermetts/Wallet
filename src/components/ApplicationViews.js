@@ -6,6 +6,10 @@ import BudgetAppInputFormThree from './BudgetApp/BudgetAppInputFormThree'
 import BudgetAppInputFormFour from './BudgetApp/BudgetAppInputFour'
 import ResultsPage from './BudgetApp/ResultsPage'
 import BudgetAppHomePage from './BudgetApp/BudgetAppHomePage'
+import CashWishlistApp from './BudgetApp/CashWishlistApp'
+import CashWishlistAppPageTwo from './BudgetApp/CashWishlistAppPageTwo'
+import CashWishlistAppResults from './BudgetApp/CashWishlistAppResults'
+
 
 export default class ApplicationViews extends Component {
 
@@ -40,8 +44,25 @@ export default class ApplicationViews extends Component {
     amountLeft:0,
 
 
+    // State for Wishlist app:
+    itemToPurchase:"",
+    itemToPurchasePrice:0,
+    selects:"Yearly",
+    typeOfSaving:""
   }
 
+  checkSelects = () => {
+    if (this.state.selects === "Yearly"){
+      this.setState({typeOfSaving:"year(s)"});
+    } else if (this.state.selects === "Monthly"){
+      this.setState({typeOfSaving:"month(s)"});
+    } else if (this.state.selects === "Daily"){
+      this.setState({typeOfSaving:"day(s)"});
+    }
+
+    console.log(this.state.typeOfSaving)
+
+  }
 
     // Update state whenever an input field is edited
     handleFieldChange = (evt) => {
@@ -72,6 +93,9 @@ export default class ApplicationViews extends Component {
       this.setState({cable:0})
       this.setState({totalExpenses:0})
       this.setState({amountLeft:0})
+      this.setState({itemToPurchase:""})
+      this.setState({itemToPurchasePrice:0})
+      this.setState({selects:"Yearly"})
       console.log("something worked")
     }
 
@@ -108,6 +132,35 @@ export default class ApplicationViews extends Component {
           <Route exact path="/" render={props => {
             return <BudgetAppHomePage {...props}
             handleFieldChange={this.handleFieldChange}
+                   />
+          }} />
+
+          <Route exact path="/CashWishlistApp" render={props => {
+            return <CashWishlistApp {...props}
+            handleFieldChange={this.handleFieldChange}
+                   />
+          }} />
+
+           <Route exact path="/CashWishlistAppPageTwo" render={props => {
+            return <CashWishlistAppPageTwo {...props}
+            handleFieldChange={this.handleFieldChange}
+            name={this.state.name}
+            itemToPurchase={this.state.itemToPurchase}
+            itemToPurchasePrice={this.state.itemToPurchasePrice}
+            selects={this.state.selects}
+            checkSelects={this.checkSelects}
+                   />
+          }} />
+
+          <Route exact path="/CashWishlistAppResults" render={props => {
+            return <CashWishlistAppResults {...props}
+            handleFieldChange={this.handleFieldChange}
+            name={this.state.name}
+            itemToPurchase={this.state.itemToPurchase}
+            itemToPurchasePrice={this.state.itemToPurchasePrice}
+            selects={this.state.selects}
+            typeOfSaving={this.state.typeOfSaving}
+            checkSelects={this.checkSelects}
                    />
           }} />
 

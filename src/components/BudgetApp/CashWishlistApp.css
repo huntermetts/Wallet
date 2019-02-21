@@ -1,0 +1,20 @@
+.selects{
+    width: 50%;
+    margin-bottom:50px;
+    flex-basis: 50%;
+}
+
+.centerSelects{
+    display: flex;
+    justify-content: center;
+}
+
+.centerText{
+text-align:center;
+margin-bottom: 40px;
+color:white;
+}
+
+.lowerText{
+    margin-bottom: 170px;
+}

@@ -10,7 +10,7 @@ export default class BudgetApp extends Component {
             <React.Fragment>
             <div className="walletHeader text-success">
                 <h2 className="walletBold font-weight-bold">W A L L E T.</h2>
-                <h4 className="headerDesc">Monthy budgeting like it should be.</h4>
+                <h4 className="headerDesc">Monthy expense tracker</h4>
             </div>
 
                 <div className="flexContainerForForm">
