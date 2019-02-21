@@ -1,6 +1,6 @@
 # Wallet
 
-##React Budget App
+## React Budget App
 
 ![](wallet.gif)
 
